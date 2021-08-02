@@ -17,11 +17,12 @@ driver.get("https://witty-hill-0acfceb03.azurestaticapps.net/guess_the_number.ht
 def ts():
     time.sleep(1)
 
+
 input = driver.find_element_by_tag_name('input')
 guess = driver.find_element_by_xpath("//*[contains(text(), 'Guess')]")
 guess = driver.find_element_by_class_name('input-group-btn')
 
-for i in range(1,10):
+for i in range(1, 10):
     input.clear()
     ts()
     input.send_keys(i)
@@ -33,4 +34,3 @@ for i in range(1,10):
         szamlalo = i
         break
 print(szamlalo)
-
